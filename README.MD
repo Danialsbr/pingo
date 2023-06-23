@@ -48,3 +48,21 @@ The project follows the following structure:
 - SQLite: [https://www.sqlite.org/docs.html](https://www.sqlite.org/docs.html)
 
 Feel free to modify the markdown document according to your project's specific details and requirements.
+
+
+pingo/
+│
+├── templates/
+│   ├── index.html
+│   ├── status.html
+│   ├── logs.html
+│   ├── scanning.html
+│   └── base.html
+│
+├── static/
+│   ├── styles.css
+│   └── scripts.js
+│
+├── devices.txt
+├── log.db
+└── main.py
