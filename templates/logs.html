@@ -1,1 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Device Logs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Device Logs</h1>
+    <h2>IP Address: {{ ip_address }}</h2>
+    <table>
+        <tr>
+            <th>Timestamp</th>
+            <th>Status</th>
+        </tr>
+        {% for log in logs %}
+        <tr>
+            <td>{{ log.timestamp }}</td>
+            <td>{{ log.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/status" class="back-button">Go Back</a>
+    <script src="scripts.js"></script>
+</body>
+</html>
 
