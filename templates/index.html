@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Monitoring and Discovery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('status') }}">Status</a></li>
+                <li><a href="{{ url_for('scanning') }}">Scanning</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Network Monitoring and Discovery</h1>
+        <div class="dashboard">
+            <h2>Device Status</h2>
+            <table>
+                <tr>
+                    <th>Device Name</th>
+                    <th>IP Address</th>
+                    <th>Status</th>
+                </tr>
+                {% for device in status_list %}
+                <tr>
+                    <td>{{ device['name'] }}</td>
+                    <td><a href="{{ url_for('logs', ip_address=device['ip']) }}">{{ device['ip'] }}</a></td>
+                    <td class="status-row">
+                        <span class="dot {% if 'Unreachable' in device['status'] %}dot-red{% else %}dot-green{% endif %}"></span>
+                        {{ device['status'] }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>Network Monitoring and Discovery &copy; 2023</p>
+    </footer>
+</body>
+
+</html>
