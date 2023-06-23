@@ -1,2 +1,4 @@
-pip install flask
-pip install pythonping
+Flask==1.1.4
+Flask-WTF==0.15.1
+OpenCV==4.5.3
+numpy==1.21.2
