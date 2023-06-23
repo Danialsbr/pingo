@@ -47,7 +47,6 @@ The project follows the following structure:
 - Flask: [https://flask.palletsprojects.com/](https://flask.palletsprojects.com/)
 - SQLite: [https://www.sqlite.org/docs.html](https://www.sqlite.org/docs.html)
 
-Feel free to modify the markdown document according to your project's specific details and requirements.
 
 
 
