@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Device Status</title>
+    <title>Network Scanner - Status</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Device Status</h1>
-    <table>
-        <tr>
-            <th>Device Name</th>
-            <th>IP Address</th>
-            <th>Status</th>
-        </tr>
-        {% for device in status_list %}
-        <tr>
-            <td>{{ device.name }}</td>
-            <td>{{ device.ip }}</td>
-            <td class="status-cell {% if 'Unreachable' in device.status %}unreachable{% endif %}">
-                <span class="dot {% if 'Unreachable' in device.status %}dot-red{% else %}dot-green{% endif %}"></span>
-                {{ device.status }}
-            </td>
-        </tr>
-        {% endfor %}
-    </table>
-    <a href="/" class="back-button">Go Back</a>
+    <header>
+        <h1>Network Scanner</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="status.html">Status</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content">
+        <h2>Device Status</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Device Name</th>
+                    <th>IP Address</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="status-table"></tbody>
+        </table>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
-
