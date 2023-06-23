@@ -1,1 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #333, #222);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #dd4814;
+}
+
+.dashboard {
+    background-color: #000;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    color: #fff;
+}
+
+th {
+    background: linear-gradient(to bottom, #dd4814, #ff7518);
+}
+
+.status-row {
+    background: linear-gradient(to bottom, #444, #333);
+    transition: background-color 0.2s ease;
+}
+
+.status-row:hover {
+    background: linear-gradient(to bottom, #555, #444);
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.dot-green {
+    background-color: #6dbc45;
+}
+
+.dot-red {
+    background-color: #ff0000;
+}
+
+.unreachable {
+    background-color: #ff0000;
+}
+
+.graph-container {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    background-color: #222;
+    position: relative;
+    overflow: hidden;
+}
+
+.graph-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #dd4814;
+    transition: height 0.5s ease;
+}
+
+.status-card {
+    background-color: #000;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.status-card h2 {
+    margin: 0;
+    color: #dd4814;
+}
+
+.ip {
+    color: #777;
+    margin-top: 10px;
+}
+
+.status {
+    margin-top: 10px;
+}
+
+.status-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #dd4814;
+    text-decoration: none;
+    background-color: #222;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.status-card a:hover {
+    background-color: #444;
+}
+
+.back-button {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #dd4814;
+    text-decoration: none;
+    background-color: #222;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #444;
+}
