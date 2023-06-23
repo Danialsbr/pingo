@@ -50,19 +50,4 @@ The project follows the following structure:
 Feel free to modify the markdown document according to your project's specific details and requirements.
 
 
-pingo/
-│
-├── templates/
-│   ├── index.html
-│   ├── status.html
-│   ├── logs.html
-│   ├── scanning.html
-│   └── base.html
-│
-├── static/
-│   ├── styles.css
-│   └── scripts.js
-│
-├── devices.txt
-├── log.db
-└── main.py
+
